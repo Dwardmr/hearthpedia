@@ -1,0 +1,15 @@
+.homeTitle{
+	height: 64px;
+	cursor: pointer;
+	background-color: #8BC34A;
+}
+.homeTitle p{
+	margin-top: 0;
+	padding-top: 18px;
+	padding-left: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,14 @@
+.masonry{
+	top: 0;
+	left: 0;
+	padding-top: 56px;
+	padding-left: 249px;
+}
+.container{
+	margin: 48px 72px;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+.container h2{
+	font-weight: 400;
+}
