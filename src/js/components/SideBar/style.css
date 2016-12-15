@@ -1,8 +1,3 @@
-.homeTitle{
-	height: 64px;
-	cursor: pointer;
-	background-color: #8BC34A;
-}
 .homeTitle p{
 	margin-top: 0;
 	padding-top: 18px;
@@ -12,4 +7,13 @@
 	font-size: 24px;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+}
+.homeButton{
+	text-decoration: none!important;
+}
+.homePaper{
+	height: 64px;
+	width: 100%;
+	border-radius: 0!important;
 }

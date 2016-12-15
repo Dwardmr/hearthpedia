@@ -25,13 +25,13 @@ export default class Layout extends React.Component{
 		return(
 			<MuiThemeProvider muiTheme={muiTheme}>
 				<div>
-					<Nav />
+					<Nav pathname={this.props.location.pathname} />
 					<div class={styles.masonry}>
 						<div class={styles.container}>
 							{this.props.children}
 						</div>
 					</div>
-					<SideBar />
+					<SideBar pathname={this.props.location.pathname} />
 				</div>
 			</MuiThemeProvider>
 		);
