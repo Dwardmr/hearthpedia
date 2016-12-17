@@ -16,6 +16,13 @@
 .verticalDiv{
 	height: 32px;
 }
+.verticalDivSmall{
+	height: 16px;
+}
 .searchButton{
 	width: 58%;
+}
+.checkboxContainer{
+	display: flex;
+	width: 10%;
 }
