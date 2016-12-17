@@ -1,9 +1,9 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Info from 'material-ui/svg-icons/action/Info';
+import Info from 'material-ui/svg-icons/action/info';
 import Home from 'material-ui/svg-icons/action/home';
-import Explore from 'material-ui/svg-icons/action/Explore';
+import Explore from 'material-ui/svg-icons/action/explore';
 
 import Paper from 'material-ui/Paper';
 
