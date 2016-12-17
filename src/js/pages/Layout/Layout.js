@@ -2,8 +2,8 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { 
-	lightGreen500,  lightGreen700, lightGreen800,
-	deepOrange500, deepOrange700, deepOrange900,
+	lightGreen500,  lightGreen700, grey400,
+	deepOrange500, grey100 , grey500,
 } from 'material-ui/styles/colors';
 
 import Nav from '../../components/Nav/Nav';
@@ -16,10 +16,10 @@ export default class Layout extends React.Component{
 			palette: {
 				primary1Color: lightGreen500,
 				primary2Color: lightGreen700,
-				primary3Color: lightGreen800,
+				primary3Color: grey400,
 				accent1Color: deepOrange500,
-				accent2Color: deepOrange700,
-				accent3Color: deepOrange900,
+				accent2Color: grey100,
+				accent3Color: grey500,
 			},
 		});
 		return(

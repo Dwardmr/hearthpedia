@@ -1,0 +1,21 @@
+.inputContainerLarge{
+	width: 600px;
+}
+.inputContainerNumber{
+	width: 100px;
+}
+.dataContainer{
+	display: flex;
+}
+.spaceDiv{
+	width: 5%;
+}
+.lineBreak{
+	flex: 1;
+}
+.verticalDiv{
+	height: 32px;
+}
+.searchButton{
+	width: 58%;
+}

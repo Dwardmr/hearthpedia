@@ -1,16 +1,23 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import styles from './style.css';
+import { lightGreen500 } from 'material-ui/styles/colors';
 
 export default class SearchBar extends React.Component{
 	render(){
+		const borderColor = this.props.borderColor ? this.props.borderColor : lightGreen500;
+		const inlineStyle = {
+			border: {
+				borderColor: borderColor,
+			},
+		}
 		return(
-			<div class={styles.inputContainer}>
 			<TextField
-				hintText="www.facebook.com/google"
+				hintText={this.props.placeholderText}
 				fullWidth={true}
+				underlineFocusStyle={inlineStyle.border}
+				class={styles.textField}
 			/>
-			</div>
 		);
 	}
 }
