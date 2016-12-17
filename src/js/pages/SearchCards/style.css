@@ -19,10 +19,17 @@
 .verticalDivSmall{
 	height: 16px;
 }
+.verticalDivCard{
+	height: 10px;
+}
 .searchButton{
 	width: 58%;
 }
 .checkboxContainer{
 	display: flex;
 	width: 10%;
+}
+.cardContainer{
+	display: flex;
+	width: 58%;
 }

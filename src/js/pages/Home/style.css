@@ -1,4 +1,9 @@
 .inputContainer{
-	width: 200px;
-	margin: 0 auto;
+	text-align: center;
+}
+.mainButton{
+	width: 58%
+}
+.verticalDiv{
+	height: 32px;
 }

@@ -16,7 +16,7 @@ export default class Nav extends React.Component{
 		return(
 			<div class={styles.appBar}>
 					<AppBar
-						title="Artemise"
+						title="Hearthpedia"
 						zDepth={0}
 						style={customStyle.navBar}
 					/>

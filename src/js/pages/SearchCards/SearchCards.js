@@ -3,10 +3,12 @@ import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import Search from 'material-ui/svg-icons/action/Search';
 import { Tabs, Tab } from 'material-ui/Tabs';
+import { Card, CardHeader, CardText } from 'material-ui/Card';
 import Checkbox from 'material-ui/Checkbox';
 
 import SearchBar from '../../components/SearchBar/SearchBar';
 import SelectItems from '../../components/SelectItems/SelectItems';
+import CheckboxList from '../../components/CheckboxList/CheckboxList';
 import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 import styles from './style.css'
 
@@ -15,9 +17,16 @@ export default class SearchCards extends React.Component{
 		const localeArray= [{"labelText": "enUS - American English "}, {"labelText": "enGB - European English"}, {"labelText": "deDE - German"}, {"labelText": "esES - European Spanish"}, {"labelText": "esMX - Latin American Spanish"}, {"labelText": "frFR - French"}, {"labelText": "itIT - Italian"}, {"labelText": "koKR - Korean"}, {"labelText": "plPL - Polish"}, {"labelText": "ptBR - Brazilian Portuguese"}, {"labelText": "ruRU - Russian"}, {"labelText": "zhCN - Simplified Chinese"}, {"labelText": "zhTW - Traditional Chinese"}, {"labelText": "jaJP - Japanese"}, {"labelText": "thTH - Thai"}];
 		const cardSets= [{"labelText": "Any"}, {"labelText": "Basic"}, {"labelText": "Classic"}, {"labelText": "Promo"},  {"labelText": "Reward"}, {"labelText": "Naxxramas"}, {"labelText": "Goblins vs Gnomes"}, {"labelText": "Blackrock Mountain"}, {"labelText": "The Grand Tournament"}, {"labelText": "The League of Explorers"}, {"labelText": "Whispers of the Old Gods"}, {"labelText": "Karazhan"}, {"labelText": "Mean Streets of Gadgetzan"}];
 		const cardQuality= [{"quality": "Free"}, {"quality": "Common"}, {"quality": "Rare"}, {"quality": "Epic"}, {"quality": "Legandary"}];
+		const heroClass= [{"labelText": "Any"}, {"labelText": "Neutral"}, {"labelText": "Dream"}, {"labelText": "Druid"}, {"labelText": "Hunter"}, {"labelText": "Mage"}, {"labelText": "Paladin"}, {"labelText": "Priest"}, {"labelText": "Rogue"}, {"labelText": "Shaman"}, {"labelText": "Warlock"}, {"labelText": "Warrior"}];
 		const inlineStyles = {
-			checkboxIcon: {
+			checkboxIcon:{
 				marginRight: "5px",
+			},
+			tabs:{
+				zIndex: 0,
+			},
+			card:{
+				width: "100%",
 			}
 		};
 		const qualityCheckboxes = cardQuality.map((qItem, i) =>
@@ -31,7 +40,7 @@ export default class SearchCards extends React.Component{
 			<div>
 				<h2>Search Cards!</h2>
 				<p>Go through the Innkeeper's finest commons.</p>
-				<Tabs>
+				<Tabs style={inlineStyles.tabs}>
 					<Tab label="Search by Name">
 						<div class={styles.verticalDiv} />
 						<div class={styles.dataContainer}>
@@ -80,15 +89,34 @@ export default class SearchCards extends React.Component{
 								/>
 							</div>
 						</div>
-						<div class={styles.dataContainer}>
-							<SelectItems
-								labelText="Card Set"
-								itemsArray={cardSets}
-							/>
-							<div class={styles.spaceDiv} />
-							<ToggleSwitch
-								labelText="Collectible"
-							/>
+						<div class={styles.cardContainer}>
+							<Card style={inlineStyles.card}>
+								<CardHeader
+									title="Class"
+									actAsExpander={true}
+									showExpandableButton={true}
+								/>
+								<CardText expandable={true}>
+									<CheckboxList
+										arrayList={heroClass}
+									/>
+								</CardText>
+							</Card>
+						</div>
+						<div class={styles.verticalDivCard} />
+						<div class={styles.cardContainer}>
+							<Card style={inlineStyles.card}>
+								<CardHeader
+									title="Card Set"
+									actAsExpander={true}
+									showExpandableButton={true}
+								/>
+								<CardText expandable={true}>
+									<CheckboxList
+										arrayList={cardSets}
+									/>
+								</CardText>
+							</Card>
 						</div>
 						<div class={styles.verticalDivSmall} />
 						<div class={styles.checkboxContainer}>
@@ -98,6 +126,10 @@ export default class SearchCards extends React.Component{
 							<SelectItems
 								labelText="Locale (language)"
 								itemsArray={localeArray}
+							/>
+							<div class={styles.spaceDiv} />
+							<ToggleSwitch
+								labelText="Collectible"
 							/>
 						</div>	
 					</Tab>

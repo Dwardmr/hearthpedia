@@ -23,7 +23,7 @@ export default class SelectItems extends React.Component{
 		);
 		return(
 			<SelectField
-				floatingLabelText={this.props.labelText}
+				floatingLabelText={labelText}
 				value={this.state.value}
 				onChange={this.handleChange}
 			>
