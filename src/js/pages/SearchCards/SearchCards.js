@@ -1,7 +1,7 @@
 import React from 'react';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import Search from 'material-ui/svg-icons/action/search';
+import SearchIcon from 'material-ui/svg-icons/action/search';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import Checkbox from 'material-ui/Checkbox';
@@ -140,7 +140,7 @@ export default class SearchCards extends React.Component{
 						label="Search"
 						labelPosition="before"
 						secondary={true}
-						icon={<Search />}
+						icon={<SearchIcon />}
 						class={styles.searchButton}
 					/>
 				</div>

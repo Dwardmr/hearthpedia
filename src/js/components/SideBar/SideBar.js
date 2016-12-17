@@ -3,7 +3,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Info from 'material-ui/svg-icons/action/info';
 import Home from 'material-ui/svg-icons/action/home';
-import Explore from 'material-ui/svg-icons/action/explore';
+import SearchSVG from 'material-ui/svg-icons/action/search';
 
 import Paper from 'material-ui/Paper';
 
@@ -40,7 +40,7 @@ export default class SideBar extends React.Component{
 						</div>
 					</Paper>
 				</a>
-				<MenuItem primaryText="Search Cards" href="#/search" leftIcon={<Explore />} style={menuItemStyle.search} />
+				<MenuItem primaryText="Search Cards" href="#/search" leftIcon={<SearchSVG />} style={menuItemStyle.search} />
 				<MenuItem primaryText="About" href="#/about" leftIcon={<Info />} style={menuItemStyle.about} />
 			</Drawer>
 		);
