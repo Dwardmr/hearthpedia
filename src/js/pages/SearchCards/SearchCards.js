@@ -5,6 +5,7 @@ import SearchIcon from 'material-ui/svg-icons/action/search';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import Checkbox from 'material-ui/Checkbox';
+import Subheader from 'material-ui/Subheader';
 
 import SearchBar from '../../components/SearchBar/SearchBar';
 import SelectItems from '../../components/SelectItems/SelectItems';
@@ -27,6 +28,9 @@ export default class SearchCards extends React.Component{
 			},
 			card:{
 				width: "100%",
+			},
+			subheader:{
+				paddingLeft: 0,
 			}
 		};
 		const qualityCheckboxes = cardQuality.map((qItem, i) =>
@@ -59,7 +63,7 @@ export default class SearchCards extends React.Component{
 						</div>	
 					</Tab>
 					<Tab label="Search by Stats">
-						<div class={styles.verticalDiv} />
+						<Subheader style={inlineStyles.subheader}>Attributes:</Subheader>
 						<div class={styles.dataContainer}>
 							<div class={styles.inputContainerNumber}>
 								<SearchBar
@@ -119,6 +123,7 @@ export default class SearchCards extends React.Component{
 							</Card>
 						</div>
 						<div class={styles.verticalDivSmall} />
+						<Subheader style={inlineStyles.subheader}>Card quality:</Subheader>
 						<div class={styles.checkboxContainer}>
 							{qualityCheckboxes}
 						</div>

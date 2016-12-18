@@ -1,0 +1,19 @@
+.container{
+	text-align: center;
+	background-color: #212121;
+    position: relative;
+    height: 60px;
+
+    bottom: 0;
+		right: 0;
+		left: 0;
+		padding: 40px 30px 40px 248px;
+
+		z-index: 10;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
+}
+.container p{
+	color: #fff;
+}

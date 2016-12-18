@@ -6,6 +6,7 @@ import {
 	deepOrange500, grey100 , grey500,
 } from 'material-ui/styles/colors';
 
+import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 import SideBar from '../../components/SideBar/SideBar';
 import styles from './style.css';
@@ -31,6 +32,7 @@ export default class Layout extends React.Component{
 							{this.props.children}
 						</div>
 					</div>
+					<Footer />
 					<SideBar pathname={this.props.location.pathname} />
 				</div>
 			</MuiThemeProvider>
