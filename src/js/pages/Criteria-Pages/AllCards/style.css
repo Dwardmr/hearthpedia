@@ -1,0 +1,35 @@
+.inputContainerLarge{
+	width: 600px;
+}
+.inputContainerNumber{
+	width: 100px;
+}
+.dataContainer{
+	display: flex;
+}
+.spaceDiv{
+	width: 5%;
+}
+.lineBreak{
+	flex: 1;
+}
+.verticalDiv{
+	height: 32px;
+}
+.verticalDivSmall{
+	height: 16px;
+}
+.verticalDivCard{
+	height: 10px;
+}
+.searchButton{
+	width: 58%;
+}
+.checkboxContainer{
+	display: flex;
+	width: 10%;
+}
+.cardContainer{
+	display: flex;
+	width: 58%;
+}

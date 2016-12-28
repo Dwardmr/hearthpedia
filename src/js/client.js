@@ -6,7 +6,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import Layout from './pages/Layout/Layout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import SearchCards from './pages/SearchCards/SearchCards';
+import SearchName from './pages/SearchName/SearchName';
+import AllCards from './pages/Criteria-Pages/AllCards/AllCards';
 import store from './store';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -19,7 +20,8 @@ ReactDOM.render(
 		<Route path="/" component={Layout}>
 			<IndexRoute component={Home}></IndexRoute>
 			<Route path="about" component={About}></Route>
-			<Route path="search" component={SearchCards}></Route>
+			<Route path="search-name" component={SearchName}></Route>
+			<Route path="criteria/search-all-cards" component={AllCards}></Route>
 		</Route>
 	</Router>
 , app);
