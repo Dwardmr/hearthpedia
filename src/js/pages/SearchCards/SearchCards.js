@@ -18,7 +18,10 @@ export default class SearchCards extends React.Component{
 		const localeArray= [{"labelText": "enUS - American English "}, {"labelText": "enGB - European English"}, {"labelText": "deDE - German"}, {"labelText": "esES - European Spanish"}, {"labelText": "esMX - Latin American Spanish"}, {"labelText": "frFR - French"}, {"labelText": "itIT - Italian"}, {"labelText": "koKR - Korean"}, {"labelText": "plPL - Polish"}, {"labelText": "ptBR - Brazilian Portuguese"}, {"labelText": "ruRU - Russian"}, {"labelText": "zhCN - Simplified Chinese"}, {"labelText": "zhTW - Traditional Chinese"}, {"labelText": "jaJP - Japanese"}, {"labelText": "thTH - Thai"}];
 		const cardSets= [{"labelText": "Any"}, {"labelText": "Basic"}, {"labelText": "Classic"}, {"labelText": "Promo"},  {"labelText": "Reward"}, {"labelText": "Naxxramas"}, {"labelText": "Goblins vs Gnomes"}, {"labelText": "Blackrock Mountain"}, {"labelText": "The Grand Tournament"}, {"labelText": "The League of Explorers"}, {"labelText": "Whispers of the Old Gods"}, {"labelText": "Karazhan"}, {"labelText": "Mean Streets of Gadgetzan"}];
 		const cardQuality= [{"quality": "Free"}, {"quality": "Common"}, {"quality": "Rare"}, {"quality": "Epic"}, {"quality": "Legandary"}];
+		const cardType= [{type: "Any"}, {type: "Hero"}, {type: "Minion"}, {type: "Spell"}, {type: "Enchantment"}, {type: "Weapon"}, {type: "Hero Power"}];
 		const heroClass= [{"labelText": "Any"}, {"labelText": "Neutral"}, {"labelText": "Dream"}, {"labelText": "Druid"}, {"labelText": "Hunter"}, {"labelText": "Mage"}, {"labelText": "Paladin"}, {"labelText": "Priest"}, {"labelText": "Rogue"}, {"labelText": "Shaman"}, {"labelText": "Warlock"}, {"labelText": "Warrior"}];
+		const factions= [{labelText: "Any"}, {labelText: "Horde"}, {labelText: "Alliance"}, {labelText: "Neutral"}];
+		const races= [{labelText: "Any"}, {labelText: "Demon"}, {labelText: "Dragon"}, {labelText: "Mech"}, {labelText: "Murloc"}, {labelText: "Beast"}, {labelText: "Pirate"}, {labelText: "Totem"}];
 		const inlineStyles = {
 			checkboxIcon:{
 				marginRight: "5px",
@@ -37,6 +40,13 @@ export default class SearchCards extends React.Component{
 			<Checkbox
 				key={i}
 				label={qItem.quality}	
+				iconStyle={inlineStyles.checkboxIcon}
+			/>
+		);
+		const typeCheckboxes = cardType.map((qItem, i) =>
+			<Checkbox
+				key={i}
+				label={qItem.type}	
 				iconStyle={inlineStyles.checkboxIcon}
 			/>
 		);
@@ -122,10 +132,35 @@ export default class SearchCards extends React.Component{
 								</CardText>
 							</Card>
 						</div>
+						<div class={styles.verticalDivCard} />
+						<div class={styles.cardContainer}>
+							<Card style={inlineStyles.card}>
+								<CardHeader
+									title="Faction / Race"
+									actAsExpander={true}
+									showExpandableButton={true}
+								/>
+								<CardText expandable={true}>
+									<Subheader style={inlineStyles.subheader}>Faction:</Subheader>
+									<CheckboxList
+										arrayList={factions}
+									/>
+									<Subheader style={inlineStyles.subheader}>Race:</Subheader>
+									<CheckboxList
+										arrayList={races}
+									/>
+								</CardText>
+							</Card>
+						</div>
 						<div class={styles.verticalDivSmall} />
 						<Subheader style={inlineStyles.subheader}>Card quality:</Subheader>
 						<div class={styles.checkboxContainer}>
 							{qualityCheckboxes}
+						</div>
+						<div class={styles.verticalDivSmall} />
+						<Subheader style={inlineStyles.subheader}>Card Type:</Subheader>
+						<div class={styles.checkboxContainer}>
+							{typeCheckboxes}
 						</div>
 						<div class={styles.dataContainer}>
 							<SelectItems

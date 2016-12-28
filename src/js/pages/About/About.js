@@ -7,7 +7,7 @@ export default class About extends React.Component{
 			<div>
 				<h2>Who are we?</h2>
 				<Divider />
-				<p>A skill-based website</p>
+				<p>An open-source skill-based website</p>
 			</div>
 		);
 	}
